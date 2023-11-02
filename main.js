@@ -9,7 +9,7 @@ let selector = document.querySelectorAll(".selector span")
 
 
 sun.addEventListener("click", ()=>{
-    if(sun.src === "http://127.0.0.1:5500/images/icon-sun.svg"){
+    if(sun.src.includes("/images/icon-sun.svg")){
         document.styleSheets[1].cssRules[0].style.setProperty("--bg-color", "hsl(235, 21%, 11%)")
         document.styleSheets[1].cssRules[0].style.setProperty("--main-c", "hsl(235, 24%, 19%)")//hsl(235, 24%, 19%)
         imgBg.src = "images/bg-desktop-dark.jpg"
@@ -244,3 +244,5 @@ selector.forEach(e=>{
         }
     })
 })
+
+
